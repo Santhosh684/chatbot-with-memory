@@ -9,5 +9,5 @@ llm = Llama(model_path=MODEL_PATH)
 
 def ask_mistral(prompt: str) -> str:
     """Generate a response from the Mistral model."""
-    response = llm(prompt)
+    response = llm(prompt,max_tokens=200)
     return response["choices"][0]["text"].strip()
